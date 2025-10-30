@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Ecommerce Automation Suite">
+
+    <test name="Smoke Suite">
+        <groups>
+            <run>
+                <include name="Smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="jenkins.LoginTest"/>
+            <class name="jenkins.LogoutTest"/>
+        </classes>
+    </test>
+
+    <test name="Regression Suite">
+        <groups>
+            <run>
+                <include name="Regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="jenkins.LoginTest"/>
+            <class name="jenkins.PurchaseTest"/>
+            <class name="jenkins.DataDrivenLoginTest"/>
+        </classes>
+    </test>
+
+</suite>
